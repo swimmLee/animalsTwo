@@ -13,11 +13,15 @@ public class Main {
 
     public Main() {
         ArrayList<Talkable> zoo = new ArrayList<>();
+        UserInput fill = new UserInput(zoo);
+        fill.fillZOO();
 
         // Lines to Replace
+        /*
         zoo.add(new Dog(true, "Pete"));
         zoo.add(new Cat(9, "Anne Belly"));
         zoo.add(new Student(19, "Joe John Johnson"));
+        */
         // End Lines to Replace
 
         for (Talkable thing : zoo) {
