@@ -24,11 +24,12 @@ public class UserInput {
         String type = "", name = "";
         int mouses = 0, age = 0;
         Boolean friendly;
+        System.out.println("What kind of critter do you want to put in the zoo?");
+        System.out.println(" Choose: Cat, Dog, Student. OR enter Quit to end.");
+        type = keybrd.nextLine();
+        
         while(!type.equalsIgnoreCase("quit")){
             
-            System.out.println("What kind of critter do you want to put in the zoo?");
-            System.out.println(" Choose Cat, Dog, Student");
-            type = keybrd.nextLine();
             if(type.equalsIgnoreCase("cat")){
                 System.out.println("What is the cat's name?");
                 name = keybrd.nextLine();
@@ -42,6 +43,7 @@ public class UserInput {
                 }
                 
             }
+            
             else if(type.equalsIgnoreCase("dog")){
                 System.out.println("What is the dog's name?");
                 name = keybrd.nextLine();
@@ -64,6 +66,7 @@ public class UserInput {
                     System.out.println("You did not enter true or false. "+e.getMessage());
                 }
             }
+            
             else if(type.equalsIgnoreCase("student")){
                 System.out.println("What is the student's name?");
                 name = keybrd.nextLine();
@@ -77,7 +80,16 @@ public class UserInput {
                 }
                 
             }
-        }
+            
+            else{
+                System.out.println("Enter either Cat, Dog, Student. " + 
+                        "No data was entered.");
+            }
+            
+            type = "";
+            System.out.println("Enter another: Cat, Dog, Student. OR enter Quit to end.");
+            type = keybrd.nextLine();
+        }   //end while
     }
     
     /*
